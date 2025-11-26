@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font family */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html, body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0F0F14;
+  color: #EAEAEA;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hero h1 {
+  color: #5929B3;
+}
+
+section h2 {
+  color: #5929B3;
+}
+
+.card {
+  background-color: #17171E;
+  border: 1px solid #3A1E73;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.cta a {
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  opacity: 0.6;
+}
