@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filippo Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: #0F0F14;
+      color: #EAEAEA;
+    }
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #EAEAEA;
+      font-weight: 500;
+    }
+    .hero {
+      padding: 100px 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #7C4DFF;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    .cta {
+      margin-top: 30px;
+    }
+    .cta a {
+      padding: 12px 24px;
+      margin: 0 10px;
+      border-radius: 10px;
+      background: #5929B3;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+    }
+    section {
+      padding: 60px 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .title {
+      font-size: 2rem;
+      color: #7C4DFF;
+      margin-bottom: 20px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #17171E;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #3A1E73;
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Filippo</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Web Developer</h1>
+    <p>PHP · HTML · CSS · Java · C · Docker · React · Go (coming)</p>
+    <div class="cta">
+      <a href="#projects">View Projects</a>
+      <a href="cv.pdf" target="_blank">Download CV</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="title">About Me</div>
+    <p>
+      Sono uno sviluppatore web e studente di Informatica alla Sapienza.
+      Lavoro con PHP e Docker e studio Java, C, Go, Vue e Kubernetes.
+    </p>
+  </section>
+
+  <section id="projects">
+    <div class="title">Projects</div>
+    <div class="projects">
+      <div class="card">
+        <h3>Progetto 1</h3>
+        <p>Descrizione breve del progetto.</p>
+      </div>
+      <div class="card">
+        <h3>Progetto 2</h3>
+        <p>Descrizione breve del progetto.</p>
+      </div>
+      <div class="card">
+        <h3>Progetto 3</h3>
+        <p>Descrizione breve del progetto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="title">Skills</div>
+    <p>PHP, Java, C, Go, HTML, CSS, JS, React, Docker, Kubernetes</p>
+  </section>
+
+  <section id="contact">
+    <div class="title">Contact</div>
+    <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+  </section>
+
+  <footer>© 2025 Filippo — Hosted on GitHub Pages</footer>
+</body>
+</html>
