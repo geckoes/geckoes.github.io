@@ -21,6 +21,9 @@ links into the same long-running portfolio campaign.
 GoatCounter creates campaign entries automatically when visits arrive through
 these URLs. Do not put personal data in UTM values.
 
+Primary analytics: Cloudflare Web Analytics
+Secondary/legacy analytics: GoatCounter (temporary)
+
 ## Verification
 
 Open a campaign link in a browser where analytics blocking is disabled, then
