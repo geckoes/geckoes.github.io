@@ -81,7 +81,7 @@ h2 {
   margin: 0 0 1.25rem;
 }
 
-h3 {
+h3, .project h4 {
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.4rem;
@@ -116,6 +116,47 @@ section > ul > li::before {
 .project { margin-bottom: 1.75rem; }
 .project:last-child { margin-bottom: 0; }
 .project p { margin: 0; }
+
+.portfolio-status { margin-bottom: 2rem; }
+.portfolio-status > h3 { margin-bottom: 1.25rem; }
+
+.status-project {
+  border-left: 2px solid var(--rule);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.status-project:first-child { border-left-color: var(--accent); }
+
+.status-project h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.25rem 0 0.4rem;
+}
+
+.status-project p { margin: 0.35rem 0; }
+
+.status-badges {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+
+.status-target, .status-current, .status-progress-label { font-size: 0.9rem; }
+.status-progress-label { font-variant-numeric: tabular-nums; }
+
+.status-project progress {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  height: 0.5rem;
+  margin: 0.7rem 0;
+  accent-color: var(--accent);
+}
+
+.status-note { color: var(--fg-muted); font-size: 0.8rem; }
+.featured-heading { margin-bottom: 1.25rem; }
 
 .timeline li {
   padding-left: 0;

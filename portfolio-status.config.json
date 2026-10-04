@@ -1,0 +1,23 @@
+{
+  "owner": "geckoes",
+  "project_title": "Engineering Portfolio",
+  "projects": [
+    {
+      "project_values": ["Temperature Monitor", "temperature-monitor"],
+      "repository": "geckoes/temperature-monitor",
+      "targets": {
+        "v1.0 Portfolio Release": ["M00", "M01", "M02", "M03", "M04", "M05", "M06", "M07"]
+      }
+    },
+    {
+      "project_values": ["Expected Run", "expected-run"],
+      "repository": null,
+      "targets": {}
+    },
+    {
+      "project_values": ["Air Quality Intelligence", "air-quality-intelligence"],
+      "repository": "geckoes/air-quality-intelligence",
+      "targets": {}
+    }
+  ]
+}
