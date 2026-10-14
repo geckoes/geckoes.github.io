@@ -118,3 +118,42 @@ test("completed target renders 100% without a current milestone", async () => {
   const { container } = await run(data);
   assert(all(container).some(n => n.textContent === "All target milestones closed."));
 });
+
+test("shows summary as text and an explicit GitHub details link", async () => {
+  const data = fixture();
+  const current = data.projects[0].current_milestone;
+  current.summary = '<img src=x onerror="alert(1)">';
+  const { container } = await run(data);
+  const nodes = all(container);
+  assert(nodes.some(n => n.tag === "span" && n.textContent === current.title));
+  assert(nodes.some(n => n.textContent === current.summary));
+  assert.equal(nodes.filter(n => n.tag === "img").length, 0);
+  const details = nodes.find(n => n.textContent === "Technical details on GitHub ↗");
+  assert.equal(details.href, current.url);
+  assert.match(details.attributes["aria-label"], /M02/);
+});
+
+test("missing or null summary keeps title without linking to an empty milestone", async () => {
+  for (const summary of [undefined, null]) {
+    const data = fixture();
+    data.projects[0].current_milestone.summary = summary;
+    const { container } = await run(data);
+    const nodes = all(container);
+    assert(nodes.some(n => n.textContent === data.projects[0].current_milestone.title));
+    assert(!nodes.some(n => n.href === data.projects[0].current_milestone.url));
+  }
+});
+
+test("invalid summaries or details URLs reject the snapshot", async () => {
+  for (const mutate of [
+    current => { current.summary = {}; },
+    current => { current.summary = "  "; },
+    current => { current.summary = "Sensor registry"; current.url = "javascript:alert(1)"; },
+  ]) {
+    const data = fixture();
+    mutate(data.projects[0].current_milestone);
+    const { container } = await run(data);
+    assert.equal(all(container).filter(n => n.tag === "article").length, 0);
+    assert.match(container.children[0].textContent, /temporarily unavailable/);
+  }
+});

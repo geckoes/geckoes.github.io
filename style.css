@@ -145,6 +145,8 @@ section > ul > li::before {
 
 .status-target, .status-current, .status-progress-label { font-size: 0.9rem; }
 .status-progress-label { font-variant-numeric: tabular-nums; }
+.status-milestone-summary { font-size: 0.9rem; max-width: 38rem; }
+.status-milestone-details { font-size: 0.8rem; }
 
 .status-project progress {
   display: block;
