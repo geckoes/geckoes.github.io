@@ -187,8 +187,15 @@ def build_status(config, items, milestones_by_repository, source_url, updated_at
             }
             current = next((m for m in selected if m["state"] == "open"), None)
             if current:
+                description = current.get("description")
+                require(description is None or isinstance(description, str),
+                        "Invalid milestone description")
+                # The opening paragraph is the public summary; details stay on GitHub.
+                summary = re.split(r"\n\s*\n", (description or "").strip(), maxsplit=1)[0]
+                summary = " ".join(summary.split()) or None
                 record["current_milestone"] = {
                     "title": current["title"], "url": current["html_url"],
+                    "summary": summary,
                 }
         records.append(record)
     priorities = [record["priority"] for record in records]

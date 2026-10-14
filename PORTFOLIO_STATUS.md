@@ -115,6 +115,18 @@ may delay scheduled runs). PRs run offline tests only, without secrets or deploy
 Updates to other repositories/Project fields become visible on the next run.
 The displayed UTC timestamp identifies the last successful data collection.
 
+### Milestone context
+
+The current milestone title is plain text. Its GitHub description supplies the
+optional `current_milestone.summary`: the first paragraph, with whitespace
+collapsed. Write that opening paragraph in plain English for portfolio visitors;
+put scope and completion criteria in subsequent paragraphs on GitHub. The browser
+renders the summary as text, never as HTML or Markdown. When a summary exists, an
+explicit **Technical details on GitHub ↗** link follows it. Missing, null or blank
+descriptions omit both summary and link, so visitors are not sent to an empty
+milestone page. Older snapshots without `summary` remain readable. Editing the
+description becomes visible on the next successful publication.
+
 Only public assets and validated JSON enter the Pages artifact; scripts,
 configuration, tests, credentials and repository internals are excluded.
 Generated JSON and `_site` are ignored by Git. There are no automatic commits.

@@ -89,6 +89,27 @@ class StatusTests(unittest.TestCase):
         self.assertEqual(primary["progress"]["percent"], 100)
         self.assertIsNone(primary["current_milestone"])
 
+    def test_summary_uses_only_first_description_paragraph(self):
+        self.milestones[2]["state"] = "closed"
+        self.milestones[3]["description"] = (
+            "  Register sensors and\n associate their measurements.\r\n\r\n"
+            "## Completion criteria\n- Validate sensor identifiers."
+        )
+        current = self.build()["projects"][0]["current_milestone"]
+        self.assertEqual(current["title"], "M03 — Sensor Domain")
+        self.assertEqual(current["summary"], "Register sensors and associate their measurements.")
+
+    def test_empty_description_is_optional(self):
+        for description in [None, "", " \n\t"]:
+            with self.subTest(description=description):
+                self.milestones[2]["description"] = description
+                self.assertIsNone(self.build()["projects"][0]["current_milestone"]["summary"])
+
+    def test_invalid_description_fails(self):
+        self.milestones[2]["description"] = {"text": "Unexpected API data"}
+        with self.assertRaises(DataError):
+            self.build()
+
     def test_all_open(self):
         for milestone in self.milestones:
             milestone["state"] = "open"

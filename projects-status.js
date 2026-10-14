@@ -68,9 +68,19 @@
         if (progress.closed < progress.total) {
           const current = project.current_milestone;
           require(current && typeof current.title === "string" && current.title.length > 0);
+          require(current.summary == null || (typeof current.summary === "string"
+            && current.summary.trim().length > 0));
           const paragraph = element("p", undefined, "status-current");
-          paragraph.append("Current milestone: ", link(current.title, current.url));
+          paragraph.append("Current milestone: ", element("span", current.title));
           card.append(paragraph);
+          if (current.summary) {
+            card.append(element("p", current.summary, "status-milestone-summary"));
+            const details = element("p", undefined, "status-milestone-details");
+            const detailsLink = link("Technical details on GitHub ↗", current.url);
+            detailsLink.setAttribute("aria-label", `${current.title}: technical details on GitHub`);
+            details.append(detailsLink);
+            card.append(details);
+          }
         } else {
           require(project.current_milestone === null);
           card.append(element("p", "All target milestones closed.", "status-current"));
