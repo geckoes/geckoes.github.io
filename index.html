@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filippo Taiuti — Software Engineer</title>
-  <meta name="description" content="Backend services, distributed systems, and the things that surface in production. Florence, Italy, in tech since 1997.">
+  <title>Filippo Taiuti — Software Developer</title>
+  <meta name="description" content="Software Developer working across backend and frontend, with a backend focus. PHP, JavaScript and Java / Spring Boot projects. Based near Florence, Italy.">
 
-  <meta property="og:title" content="Filippo Taiuti — Software Engineer">
-  <meta property="og:description" content="Backend services, distributed systems, and the things that surface in production. Florence, Italy, in tech since 1997.">
+  <meta property="og:title" content="Filippo Taiuti — Software Developer">
+  <meta property="og:description" content="Software Developer working across backend and frontend, with a backend focus. PHP, JavaScript and Java / Spring Boot projects. Based near Florence, Italy.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://filippotaiuti.dev/">
-  <meta property="og:image" content="https://filippotaiuti.dev/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://filippotaiuti.dev/">
 
   <link rel="stylesheet" href="style.css">
@@ -28,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Filippo Taiuti",
-    "jobTitle": "Software Engineer",
+    "jobTitle": "Software Developer",
     "url": "https://filippotaiuti.dev",
     "sameAs": [
       "https://www.linkedin.com/in/filippo-taiuti",
@@ -39,7 +36,7 @@
       "addressLocality": "Florence",
       "addressCountry": "IT"
     },
-    "description": "Backend services, distributed systems, and the things that surface in production. Florence, Italy, in tech since 1997."
+    "description": "Software Developer working across backend and frontend, with a backend focus. PHP, JavaScript and Java / Spring Boot projects. Based near Florence, Italy."
   }
   </script>
 </head>
@@ -47,74 +44,82 @@
   <main>
     <header>
       <h1>Filippo Taiuti</h1>
-      <p class="role">Software Engineer · Distributed Systems</p>
-      <p class="location">Florence, Italy · in tech since 1997</p>
+      <p class="role">Software Developer · Full-stack Development · Backend Focus</p>
+      <p class="location">Based near Florence, Italy</p>
     </header>
 
-    <section>
-      <p>I build backend services and work with distributed systems, with a focus on the things that surface in production rather than in tutorials — reliability, performance, and graceful failure. My path started in IT infrastructure: servers, networks, monitoring, on-call. That operational background still shapes how I write code.</p>
-
-      <p>When I design a service I'm not only thinking about its logic — I'm thinking about how it runs in production, how it scales, how it degrades and how the person on call at 3 a.m. will diagnose it.</p>
+    <section aria-label="About">
+      <p>I develop web applications across backend and frontend, with most of my work focused on backend features, application logic and data access. My professional stack includes PHP, Smarty, JavaScript, HTML/CSS, MongoDB, Redis and RabbitMQ.</p>
+      <p>I discuss technical solutions with my lead and turn business requirements into working features. My background in system administration, networking and IT support helps me investigate problems across the application and its operating environment.</p>
+      <p>Alongside work, I study Computer Science at UnitelmaSapienza and build projects to turn ideas into useful software. I'm strengthening my software design, automated testing and documentation skills through Java and Spring Boot development.</p>
     </section>
 
     <section>
-      <h2>What I'm working on</h2>
+      <h2>What I work on</h2>
       <ul>
-        <li>Building <b>Temperature Monitor</b>, a Spring Boot/PostgreSQL backend focused on production-oriented API engineering, testing, observability, and reliability.</li>
-        <li>Designing <b>Expected Run</b>, a job-monitoring platform with a Go cloud backend and a Rust agent.</li>
-        <li>Studying Computer Science at UnitelmaSapienza, strengthening the theoretical foundations behind my engineering experience.</li>
+        <li><strong>Application development:</strong> backend and frontend features, data persistence, REST/JSON APIs, validation and maintenance of existing applications.</li>
+        <li><strong>Performance:</strong> proactive analysis of page loading and content downloads, query analysis, database indexes and caching. One MongoDB query improved from approximately <strong>1.7 seconds to 73 milliseconds</strong>; these timings refer to the query itself.</li>
+        <li><strong>Background processing:</strong> asynchronous tasks using RabbitMQ.</li>
       </ul>
     </section>
 
     <section>
       <h2>Projects</h2>
+      <p>Personal projects give me space to explore technical decisions, test my understanding and document what I learn.</p>
+
+      <article class="project">
+        <h3><a href="https://github.com/geckoes/temperature-monitor">Temperature Monitor</a></h3>
+        <p><strong>Current focus · Java / Spring Boot / PostgreSQL.</strong> A backend for collecting and querying temperature measurements. Features include REST request validation, pagination, sorting, time-range filters, DTO boundaries and database migrations with Flyway. Developed incrementally with automated tests, documentation and continuous integration.</p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://github.com/geckoes/air-quality-intelligence">Air Quality Intelligence</a></h3>
+        <p><strong>Early development · Python.</strong> Exploring public air-quality data, starting with ARPAT's Florence dataset. The current work covers dataset inspection and reproducible quality reports, including format errors, duplicates and missing or unexpected values. A dashboard is planned.</p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://github.com/geckoes/jimpossiblemission">JImpossibleMission</a></h3>
+        <p><strong>Java / Swing.</strong> A 2D platformer exploring object-oriented design with MVC, Strategy, Command and Flyweight, accompanied by UML documentation and a <code>stream</code> / <code>parallelStream</code> benchmark.</p>
+      </article>
+
+      <article class="project">
+        <h3>Android apps and game development</h3>
+        <p><a href="https://github.com/geckoes/Block1To9-Android">Block 1 To 9</a> is a number-merging puzzle. <a href="https://github.com/geckoes/PersonalLibraryAndroidApp">Personal Library</a> is a book tracker with ISBN scanning and Google Books / Open Library metadata. Both apps are no longer on the Android store; their Java source remains available. Mobile development and my personal Unity / C# game are currently paused while I focus on backend projects.</p>
+      </article>
 
       <div class="portfolio-status" aria-labelledby="portfolio-status-heading">
-        <h3 id="portfolio-status-heading">Portfolio Status</h3>
+        <h3 id="portfolio-status-heading">Development roadmap</h3>
         <div id="portfolio-status-content" aria-live="polite">
           <p class="status-note">Loading portfolio status…</p>
         </div>
-        <noscript><p>Enable JavaScript to view portfolio status.</p></noscript>
+        <noscript><p>Visit the project repositories above for development progress and documentation.</p></noscript>
       </div>
-
-      <h3 class="featured-heading">Featured projects</h3>
-
-      <article class="project">
-        <h4><a href="https://github.com/geckoes/jimpossiblemission">JImpossibleMission</a></h4>
-        <p>2D Java/Swing platformer designed as an in-depth showcase of object-oriented design patterns — MVC, Strategy, Command, Flyweight, and reflection-based view dispatch across ~117 classes. Ships with UML diagrams and a benchmarked <code>stream</code> vs <code>parallelStream</code> comparison.</p>
-      </article>
-
-      <article class="project">
-        <h4><a href="https://github.com/geckoes/Block1To9-Android">Block 1 To 9</a></h4>
-        <p>Number-merging Android puzzle with an original "special move" diagonal-unlock mechanic — when a block reaches ten, it disappears and grants a window of moves that aren't normally possible. 2018 Java prototype; Kotlin rewrite for Google Play in progress.</p>
-      </article>
-
-      <article class="project">
-        <h4><a href="https://github.com/geckoes/PersonalLibraryAndroidApp">Personal Library</a></h4>
-        <p>Android book tracker with ISBN barcode scanning (Google Vision) and dual-source metadata from Google Books and Open Library. Multi-library data model that takes "this book is in two places" seriously. 2018 Java snapshot; Kotlin / Jetpack Compose rewrite on the roadmap.</p>
-      </article>
     </section>
 
     <section>
       <h2>Background</h2>
       <ul class="timeline">
-        <li><span class="when">2023 — present</span>Web Software Developer at Cupsolidale.it &amp; Aperion.it Digital Enablers — distributed web platforms in production.</li>
-        <li><span class="when">2015 — 2023</span>Application development (AudioGuide / Gestione Multiservizi) and embedded enterprise IT support (Basis IT, in Baker Hughes-GE and Alia).</li>
-        <li><span class="when">2004 — 2015</span>System Administrator and Developer at Dedalus S.p.A. — Linux/Windows infrastructure, monitoring, and in-house BI / risk-management web apps.</li>
-        <li><span class="when">1997 — 2004</span>Early career: hardware technician, IT support, sysadmin, web developer (Coopersystems, ISE, PIN Scrl).</li>
+        <li><span class="when">2023 — present</span><strong>Web Software Developer · Cupsolidale.it &amp; Aperion.</strong> Full-stack application development with a backend focus, performance analysis and asynchronous processing.</li>
+        <li><span class="when">2022 — 2023</span><strong>Web Software Developer · AudioGuide / Gestione Multiservizi.</strong> Backend and frontend development for geolocation-based audio-guided tours, using PHP, JavaScript and MariaDB.</li>
+        <li><span class="when">2015 — 2022</span><strong>Enterprise IT Support · Basis IT.</strong> Assigned to Baker Hughes / Nuovo Pignone and Alia, supporting networking, communications, identity and workstation environments.</li>
+        <li><span class="when">September 2020 — November 2021</span><strong>Game Developer · Independent team.</strong> Remote Unity / C# collaboration under a revenue-sharing agreement. Developed object creation, collection and activation mechanics, worked on maps and minigames, and documented functionality. The project ended before beta and was not released.</li>
+        <li><span class="when">2004 — 2015</span><strong>Software Developer and System Administrator · Dedalus.</strong> The first two years focused on ASP / ASP.NET applications for BI, reporting and hospital risk management; subsequent years on server administration, Nagios monitoring and internal support.</li>
+        <li><span class="when">1997 — 2004</span>Hardware and IT support, system administration and early web development at Coopersystems, ISE and PIN.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Find me</h2>
+      <h2>Let's connect</h2>
+      <p>I'm interested in development roles where I can contribute my experience, collaborate on technical decisions and take increasing responsibility for software quality and delivery. Open to hybrid roles near Florence and remote roles with working hours compatible with Italy.</p>
       <ul class="contacts">
         <li><a href="https://www.linkedin.com/in/filippo-taiuti">LinkedIn</a></li>
         <li><a href="https://github.com/geckoes">GitHub</a></li>
+        <li><a href="mailto:ftaiuti@gmail.com">Email me</a></li>
       </ul>
     </section>
 
     <footer>
-      <p>In tech since 1997 — which means I've seen systems fail in ways that never show up in tutorials.</p>
+      <p>Building software, exploring ideas and learning through practice.</p>
     </footer>
   </main>
   <!-- Cloudflare Web Analytics -->
